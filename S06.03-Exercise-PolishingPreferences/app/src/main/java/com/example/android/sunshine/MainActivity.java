@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements
      * open the Common Intents page
      */
     private void openLocationInMap() {
-        // TODO (9) Use preferred location rather than a default location to display in the map
+        // COMPLETED (9) Use preferred location rather than a default location to display in the map
         String addressString = SunshinePreferences.getPreferredWeatherLocation(this);
         Uri geoLocation = Uri.parse("geo:0,0?q=" + addressString);
 
@@ -332,7 +332,7 @@ public class MainActivity extends AppCompatActivity implements
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    // TODO (7) In onStart, if preferences have been changed, refresh the data and set the flag to false
+    // COMPLETED (7) In onStart, if preferences have been changed, refresh the data and set the flag to false
 
     @Override
     protected void onStart() {
@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    // TODO (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
+    // COMPLETED (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
     @Override
     protected void onDestroy() {
         super.onDestroy();
