@@ -15,8 +15,7 @@
      limitations under the License.
 -->
 <manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.sunshine">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- This permission is necessary in order for Sunshine to perform network access. -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -58,7 +57,9 @@
             android:authorities="@string/content_authority"
             android:exported="false"/>
         
-        <!-- TODO (8) Register SunshineSyncIntentService in the manifest -->
-
+        <!-- COMPLETED (8) Register SunshineSyncIntentService in the manifest -->
+        <service
+            android:name=".sync.SunshineSyncIntentService"
+            android:exported="false" />
     </application>
 </manifest>
